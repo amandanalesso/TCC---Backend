@@ -1,6 +1,5 @@
 
-
-echo "# APROVA-IFSP-API
+# APROVA-IFSP-API
 
 A **APROVA-IFSP-API** é uma API para gerenciamento de questões e simulados. A API permite a criação, listagem e atualização de questões, bem como a criação de simulados e o cálculo do desempenho baseado nas respostas dos usuários.
 
@@ -200,3 +199,46 @@ Este checklist detalha as etapas para o desenvolvimento do banco de questões e 
 *   **Deploy (opcional para o TCC, mas recomendado para portfólio):**
     *   [ ] Escolher uma plataforma de hospedagem (Heroku, AWS, Google Cloud, etc.).
     *   [ ] Configurar o deploy da API.
+
+    ## Protótipo no Figma
+
+O protótipo de alta fidelidade do projeto foi desenvolvido no **Figma**. A seguir, você encontrará o link para o design do simulador, onde todas as telas e interações foram criadas:
+
+- **[Protótipo de Alta Fidelidade no Figma](https://www.figma.com/design/Hb3EoYtiaOYegAr9pLkWGx/FINAL-TCC---Simulado---Prot%C3%B3tipo-alta-fidelidade?node-id=8-10&t=v895wDS2u80Q9khL-0)**
+
+  - Neste link, você pode explorar o protótipo completo, que inclui todas as interações e fluxos do simulador desenvolvido para o **TCC**.
+  - O protótipo foi desenvolvido com foco na **experiência do usuário** (UX) e na **interface do usuário** (UI).
+
+---
+
+## Apresentação
+
+A apresentação do projeto está disponível no **Google Slides**. Aqui, você poderá visualizar todos os detalhes, objetivos, arquitetura e implementação do sistema:
+
+- **[Apresentação do Projeto no Google Slides](https://docs.google.com/presentation/d/1ntS_8KJwDEszyJnulGH0Pw5PBHZAsKLfJiu77gUmUB4/edit?usp=sharing)**
+
+  - A apresentação abrange aspectos como **motivação**, **metodologia**, **tecnologias utilizadas**, além de uma demonstração das funcionalidades da API e do protótipo.
+  - A estrutura está organizada para fornecer uma visão clara sobre a solução desenvolvida e os desafios enfrentados.
+
+---
+
+## Como Explorar o Protótipo
+
+Para visualizar e interagir com o protótipo no Figma:
+
+1. **Clique no link acima** para abrir o protótipo no Figma.
+2. **Use a ferramenta de navegação do Figma** para clicar entre as telas e explorar o fluxo de usuário.
+3. Caso tenha uma conta no Figma, é possível também deixar comentários ou sugestões diretamente no protótipo.
+
+## Detalhes da Apresentação
+
+Na apresentação no Google Slides, você pode conferir:
+
+- **Visão Geral** do projeto.
+- **Explicação sobre a Stack** usada no desenvolvimento da API.
+- **Demonstração das Funcionalidades** principais do simulador.
+- **Resultados Obtidos** e futuras melhorias.
+
+---
+
+
