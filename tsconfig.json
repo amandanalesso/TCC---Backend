@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2016",                        /* Define a versão do JavaScript para saída */
+    "module": "commonjs",                      /* Usa o formato de módulo CommonJS */
+    "esModuleInterop": true,                   /* Permite importar módulos CommonJS */
+    "forceConsistentCasingInFileNames": true,  /* Força consistência nos nomes de arquivos */
+    "strict": true,                            /* Habilita verificações de tipo rigorosas */
+    "skipLibCheck": true,                      /* Ignora verificações em arquivos .d.ts */
+    "resolveJsonModule": true,                 /* Permite importar arquivos JSON */
+    "rootDir": "./src",                        /* Diretório raiz dos arquivos TypeScript */
+    "outDir": "./dist"                         /* Diretório de saída dos arquivos compilados */
+  },
+  "include": ["src/**/*.ts"]                   /* Inclui todos os arquivos TypeScript em src */
+}

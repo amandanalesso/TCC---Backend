@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "enunciado": "Qual é a capital do Brasil?",
+      "alternativas": ["São Paulo", "Brasília", "Rio de Janeiro", "Salvador"],
+      "respostaCorreta": "Brasília",
+      "nivel": "facil"
+    },
+    {
+      "id": 2,
+      "enunciado": "Quem descobriu o Brasil?",
+      "alternativas": ["Cristóvão Colombo", "Pedro Álvares Cabral", "Américo Vespúcio", "Vasco da Gama"],
+      "respostaCorreta": "Pedro Álvares Cabral",
+      "nivel": "medio"
+    }
+  ]
+  
