@@ -1,176 +1,113 @@
+Markdown
+
 # APROVA-IFSP-API
 
-A **APROVA-IFSP-API** é uma API para gerenciamento de questões e simulados. A API permite a criação, listagem e atualização de questões, bem como a criação de simulados e o cálculo do desempenho baseado nas respostas dos usuários.
+A **APROVA-IFSP-API** é uma API para gerenciamento de questões e simulados, focada em provas anteriores do IFSP. A API permite a criação, listagem e atualização de questões, bem como a criação de simulados e o cálculo do desempenho baseado nas respostas dos usuários. O sistema contará com autenticação via JWT e gerenciamento de usuários.
 
 ## Tecnologias Utilizadas
 
-- **Node.js**: Ambiente de execução JavaScript no lado do servidor.
-- **Express**: Framework minimalista para Node.js para criar APIs de forma eficiente.
-- **TypeScript**: Superset de JavaScript que adiciona tipagem estática.
-- **MVC (Model-View-Controller)**: Arquitetura para separar as responsabilidades do código em camadas.
-- **Git**: Controle de versão para gerenciar o código-fonte.
+*   **Node.js:** Ambiente de execução JavaScript no lado do servidor.
+*   **Express:** Framework minimalista para Node.js para criar APIs de forma eficiente.
+*   **TypeScript:** Superset de JavaScript que adiciona tipagem estática.
+*   **MVC (Model-View-Controller):** Arquitetura para separar as responsabilidades do código em camadas.
+*   **JWT (JSON Web Tokens):** Para autenticação e autorização de usuários.
+*   **Banco de Dados (a definir):** PostgreSQL, MySQL ou MongoDB (escolher o mais adequado).
+*   **Git:** Controle de versão para gerenciar o código-fonte.
 
 ## Funcionalidades
 
-- **Gerenciamento de Questões**: Criação, listagem e consulta de questões.
-- **Simulados**: Criação de simulados com questões cadastradas.
-- **Cálculo de Desempenho**: Calcula o desempenho do usuário com base nas respostas fornecidas.
+*   **Gerenciamento de Questões:** Criação, listagem, consulta, atualização e exclusão de questões das provas anteriores do IFSP.
+*   **Simulados:** Criação de simulados personalizados com base nas questões cadastradas.
+*   **Cálculo de Desempenho:** Calcula o desempenho do usuário com base nas respostas fornecidas nos simulados.
+*   **Autenticação e Autorização:** Sistema de login com usuário e senha, utilizando JWT para garantir a segurança.
+*   **Gerenciamento de Usuários:** Cadastro, listagem, atualização e exclusão de usuários (com níveis de acesso, se necessário, como administrador e usuário comum).
 
 ## Estrutura do Projeto
 
 A estrutura de pastas do projeto segue o padrão **MVC (Model-View-Controller)**:
 
-\`\`\`
 APROVA-IFSP-API/
 ├── TCC---Backend/
 │   ├── src/
 │   │   ├── controllers/
 │   │   │   ├── questionController.ts
 │   │   │   ├── simulatedController.ts
+│   │   │   ├── userController.ts
 │   │   ├── models/
 │   │   │   ├── question.ts
 │   │   │   ├── simulated.ts
+│   │   │   ├── user.ts
 │   │   ├── services/
 │   │   │   ├── questionService.ts
 │   │   │   ├── simulatedService.ts
+│   │   │   ├── userService.ts
 │   │   ├── routes/
 │   │   │   ├── questionsRoutes.ts
 │   │   │   ├── simulatedRoutes.ts
+│   │   │   ├── userRoutes.ts
 │   │   ├── database/
-│   │   │   ├── questions.json
+│   │   │   ├── migrations/ (para banco de dados relacional)
+│   │   │   ├── seeders/ (para popular o banco de dados)
+│   │   ├── middleware/ (para autenticação JWT)
 │   │   ├── app.ts
 │   │   ├── server.ts
 ├── package.json
 ├── tsconfig.json
 ├── .gitignore
 └── README.md
-\`\`\`
 
-## Como Rodar o Projeto
 
-### **Pré-requisitos**
+## Checklist do Projeto
 
-Antes de rodar o projeto, certifique-se de que você tenha as seguintes ferramentas instaladas:
+Este checklist detalha as etapas para o desenvolvimento do banco de questões e simulados do IFSP:
 
-- **Node.js** (recomendado versão 16 ou superior): [Instalar Node.js](https://nodejs.org/)
-- **npm**: Gerenciador de pacotes do Node (geralmente já instalado junto com o Node.js).
+*   **[ ] Planejamento e Definição:**
+    *   [ ] Definir o modelo do banco de dados (tabelas, campos, relacionamentos).
+    *   [ ] Escolher e configurar o banco de dados (PostgreSQL, MySQL, MongoDB, etc.).
+    *   [ ] Definir as rotas da API (endpoints).
+    *   [ ] Definir a estrutura de autenticação e autorização (JWT).
+*   **[ ] Implementação do Backend:**
+    *   [ ] Criar os modelos (Models) para questões, simulados e usuários.
+    *   [ ] Implementar os serviços (Services) para cada entidade (questões, simulados, usuários).
+    *   [ ] Implementar os controladores (Controllers) para lidar com as requisições da API.
+    *   [ ] Criar as rotas (Routes) para expor os endpoints da API.
+    *   [ ] Implementar a lógica de autenticação e geração de JWT.
+    *   [ ] Implementar o sistema de cadastro e gerenciamento de usuários.
+    *   [ ] Implementar a lógica de geração de simulados.
+    *   [ ] Implementar a lógica de cálculo de desempenho.
+    *   [ ] Implementar os testes unitários e de integração.
+*   **[ ] Importação das Questões:**
+    *   [ ] Definir um formato para importar as questões das provas anteriores (CSV, JSON, etc.).
+    *   [ ] Criar um script ou processo para importar as questões para o banco de dados.
+    *   [ ] Validar a integridade dos dados importados.
+*   **[ ] Testes e Refinamento:**
+    *   [ ] Testar todas as funcionalidades da API.
+    *   [ ] Corrigir bugs e realizar melhorias de desempenho.
+    *   [ ] Documentar a API (Swagger ou similar).
+*   **[ ] Deploy (opcional para o TCC, mas recomendado para portfólio):**
+    *   [ ] Escolher uma plataforma de hospedagem (Heroku, AWS, Google Cloud, etc.).
+    *   [ ] Configurar o deploy da API.
 
-### **Passos para Instalação**
+## Como Rodar o Projeto (mantido)
 
-1. **Clone o repositório**:
+(Conteúdo anterior sobre como rodar o projeto - manter)
 
-   Primeiro, clone o repositório para sua máquina local:
+## Testando a API (mantido e adaptado)
 
-   \`\`\`bash
-   git clone https://github.com/amandanalesso/TCC---Backend.git
-   cd TCC---Backend
-   \`\`\`
+(Conteúdo anterior sobre testes - manter e adicionar exemplos com autenticação)
 
-2. **Instale as dependências**:
+Exemplo de rota com autenticação (requer token JWT no header `Authorization`):
 
-   Instale todas as dependências necessárias utilizando o npm:
+#### Listar Usuários (requer autenticação de administrador)
 
-   \`\`\`bash
-   npm install
-   \`\`\`
+*   **Método:** `GET`
+*   **Endpoint:** `/users`
+*   **Header:** `Authorization: Bearer <token_JWT>`
 
-3. **Rodar a aplicação**:
+## Git Workflow (mantido)
 
-   Após a instalação das dependências, inicie o servidor com o comando:
+(Conteúdo anterior sobre Git - manter)
 
-   \`\`\`bash
-   npm start
-   \`\`\`
+## Licença (mantido)
 
-   O servidor estará rodando na porta **3000**.
-
-### **Testando a API**
-
-Você pode testar as rotas da API utilizando ferramentas como **Postman** ou **Insomnia**. Aqui estão alguns exemplos de rotas para testar:
-
-#### **1. Listar Questões**
-- **Método**: `GET`
-- **Endpoint**: `/questions`
-- **Descrição**: Retorna todas as questões cadastradas.
-
-#### **2. Criar Questão**
-- **Método**: `POST`
-- **Endpoint**: `/questions`
-- **Exemplo de Corpo**:
-  \`\`\`json
-  {
-    "id": 1,
-    "enunciado": "Qual é a capital do Brasil?",
-    "alternativas": ["São Paulo", "Brasília", "Rio de Janeiro", "Salvador"],
-    "respostaCorreta": "Brasília",
-    "nivel": "facil"
-  }
-  \`\`\`
-
-#### **3. Criar Simulado**
-- **Método**: `POST`
-- **Endpoint**: `/simulated`
-- **Exemplo de Corpo**:
-  \`\`\`json
-  {
-    "titulo": "Simulado de Geografia",
-    "questionIds": [1, 2]
-  }
-  \`\`\`
-
-#### **4. Calcular Desempenho do Simulado**
-- **Método**: `POST`
-- **Endpoint**: `/simulated/:id/performance`
-- **Exemplo de Corpo**:
-  \`\`\`json
-  {
-    "responses": ["Brasília", "Pedro Álvares Cabral"]
-  }
-  \`\`\`
-
-## Git Workflow
-
-### **1. Clonar o Repositório**
-Para começar a trabalhar no projeto, clone o repositório:
-
-\`\`\`bash
-git clone https://github.com/amandanalesso/TCC---Backend.git
-\`\`\`
-
-### **2. Criar uma Branch para Nova Feature**
-Crie uma nova branch para trabalhar em uma feature:
-
-\`\`\`bash
-git checkout -b minha-feature
-\`\`\`
-
-### **3. Commitar as Alterações**
-Após fazer as alterações, faça o commit:
-
-\`\`\`bash
-git add .
-git commit -m "Descrição das alterações"
-\`\`\`
-
-### **4. Enviar para o Repositório**
-Envie suas alterações para o repositório remoto:
-
-\`\`\`bash
-git push origin minha-feature
-\`\`\`
-
-### **5. Criar um Pull Request**
-Após enviar suas alterações, crie um **Pull Request** no GitHub para que as mudanças possam ser revisadas e integradas ao projeto principal.
-
-## Licença
-
-Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-" > README.md
-
-1. **Clone o repositório**:
-
-   Primeiro, clone o repositório para sua máquina local:
-
-   ```bash
-   git clone https://github.com/amandanalesso/TCC---Backend.git
-   cd TCC---Backend
+(Conteúdo anterior sobre licença - manter)
