@@ -170,33 +170,33 @@ Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](L
 " > README.md
 
 
+## Checklist do Projeto
 
-```APROVA-IFSP-API/
-├── TCC---Backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   │   ├── questionController.ts
-│   │   │   ├── simulatedController.ts
-│   │   │   ├── userController.ts
-│   │   ├── models/
-│   │   │   ├── question.ts
-│   │   │   ├── simulated.ts
-│   │   │   ├── user.ts
-│   │   ├── services/
-│   │   │   ├── questionService.ts
-│   │   │   ├── simulatedService.ts
-│   │   │   ├── userService.ts
-│   │   ├── routes/
-│   │   │   ├── questionsRoutes.ts
-│   │   │   ├── simulatedRoutes.ts
-│   │   │   ├── userRoutes.ts
-│   │   ├── database/
-│   │   │   ├── migrations/
-│   │   │   ├── seeders/
-│   │   ├── middleware/
-│   │   ├── app.ts
-│   │   ├── server.ts
-├── package.json
-├── tsconfig.json
-├── .gitignore
-└── README.md
+Este checklist detalha as etapas para o desenvolvimento do banco de questões e simulados do IFSP:
+
+*   **Planejamento e Definição:**
+    *   [ ] Definir o modelo do banco de dados (tabelas, campos, relacionamentos).
+    *   [ ] Escolher e configurar o banco de dados (PostgreSQL, MySQL, MongoDB, etc.).
+    *   [ ] Definir as rotas da API (endpoints).
+    *   [ ] Definir a estrutura de autenticação e autorização (JWT).
+*   **Implementação do Backend:**
+    *   [ ] Criar os modelos (Models) para questões, simulados e usuários.
+    *   [ ] Implementar os serviços (Services) para cada entidade (questões, simulados, usuários).
+    *   [ ] Implementar os controladores (Controllers) para lidar com as requisições da API.
+    *   [ ] Criar as rotas (Routes) para expor os endpoints da API.
+    *   [ ] Implementar a lógica de autenticação e geração de JWT.
+    *   [ ] Implementar o sistema de cadastro e gerenciamento de usuários.
+    *   [ ] Implementar a lógica de geração de simulados.
+    *   [ ] Implementar a lógica de cálculo de desempenho.
+    *   [ ] Implementar os testes unitários e de integração.
+*   **Importação das Questões:**
+    *   [ ] Definir um formato para importar as questões das provas anteriores (CSV, JSON, etc.).
+    *   [ ] Criar um script ou processo para importar as questões para o banco de dados.
+    *   [ ] Validar a integridade dos dados importados.
+*   **Testes e Refinamento:**
+    *   [ ] Testar todas as funcionalidades da API.
+    *   [ ] Corrigir bugs e realizar melhorias de desempenho.
+    *   [ ] Documentar a API (Swagger ou similar).
+*   **Deploy (opcional para o TCC, mas recomendado para portfólio):**
+    *   [ ] Escolher uma plataforma de hospedagem (Heroku, AWS, Google Cloud, etc.).
+    *   [ ] Configurar o deploy da API.
